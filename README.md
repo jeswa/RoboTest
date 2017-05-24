@@ -15,3 +15,38 @@ If your app has both a UI with significant depth and multiple UI branches that R
 
 Set a high value for timeout so that Robo test is able to explore multiple UI branches.
 Set a low value for maximum depth so that Robo test completes some exploration of each UI branch.
+
+## Integration with Google Play
+
+You can use Robo test in the Google Play Console when you upload and publish your app's APK file using either the alpha or beta channel. Robo test runs on a set of popular physical devices from different geographic locations, providing test coverage across various form factors and hardware configurations.
+
+## Test account sign-in and predefined text input
+
+Robo test supports test account sign-in, and also allows you to enter predefined text into fields in your app. For custom sign-in and other predefined text input, Robo test can enter text into EditText fields in your app. For each string, you need to identify the EditText field using an Android resource name.
+
+### Sign-in
+
+Robo test has two mutually-exclusive methods to support sign-in:
+
+Automatic sign-in: If your app has a sign-in screen that uses a Google account for authentication, Robo test generates a Google test account, unless you provide test account credentials for custom sign-in.
+Custom sign-in: If you provide test account credentials, you need to tell Robo test where to enter them, and also provide those credentials.
+To provide test account credentials for custom sign-in, do the following:
+
+On the Select dimensions page, choose Show advanced options.
+Under Test account credentials (Optional), enter the username and password resource names and the username and password for the test account.
+
+### Predefined text input
+
+You can provide custom input text for other text fields used by your app. To provide text input for additional fields, do the following:
+
+On the Select dimensions page, choose Show advanced options.
+
+## Known issues
+
+Robo test currently has the following known limitations:
+
+UI framework support. Robo test is only compatible with apps that use UI elements from the Android UI framework (including View and ViewGroup objects, but excluding WebView objects). If you use Robo test to exercise apps that use other UI frameworks, including apps that use the Unity game engine, the test may exit without exploring beyond the first screen.
+Sign-in Captchas. Robo test cannot bypass sign-in screens that require additional user action beyond entering credentials to sign in (such as completing a Captcha).
+Scripting. Robo test can't use a script to explore your app by using a predefined sequence of simulated user actions.
+Licensing. Robo test does not currently support the App Licensing service offered by Google Play.
+Under Additional fields (Optional), enter one or more resource names, and the strings to enter in the corresponding text fields.
