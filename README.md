@@ -48,5 +48,5 @@ Robo test currently has the following known limitations:
 UI framework support. Robo test is only compatible with apps that use UI elements from the Android UI framework (including View and ViewGroup objects, but excluding WebView objects). If you use Robo test to exercise apps that use other UI frameworks, including apps that use the Unity game engine, the test may exit without exploring beyond the first screen.
 Sign-in Captchas. Robo test cannot bypass sign-in screens that require additional user action beyond entering credentials to sign in (such as completing a Captcha).
 Scripting. Robo test can't use a script to explore your app by using a predefined sequence of simulated user actions.
-Licensing. Robo test does not currently support the App Licensing service offered by Google Play.
+Licensing. Robo test does not currently support the App Licensing service offered by Google Play
 Under Additional fields (Optional), enter one or more resource names, and the strings to enter in the corresponding text fields.
